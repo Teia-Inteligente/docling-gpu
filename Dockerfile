@@ -24,6 +24,6 @@ COPY server.py .
 # Pre-download Docling models (evita delay no primeiro request)
 RUN python3.12 -c "from docling.document_converter import DocumentConverter; DocumentConverter()"
 
-EXPOSE 8000
+EXPOSE 8888
 
-CMD ["python3.12", "-m", "uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
+CMD ["python3.12", "-m", "uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8888", "--workers", "1"]
